@@ -26,10 +26,23 @@ from sklearn.metrics import mean_absolute_percentage_error
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
+st.write("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fascinate');
+html, body, [class*="css"]  {
+   font-family: 'Morganite', cursive;
+   
+}
+
+
+        
+</style>
+""", unsafe_allow_html=True)
 
 st.title("Predicting the Airlines-Tickets Price Regression Web App")
 st.subheader("Creator : Debmalya Ray")
 st.sidebar.title("Air Ticket Price Regression")
+st.sidebar.image('https://www.freepnglogos.com/uploads/plane-png/plane-download-clip-art-clip-art-19.png', width=200)
 
 
 def main():
