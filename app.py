@@ -153,7 +153,7 @@ def main():
 				max_depth = st.sidebar.number_input("The maximum depth of the tree", 5, 20, step=1, key='max_depth')
 				bootstrap = st.sidebar.radio("Bootstrap samples when building trees", ('True', 'False'), key='bootstrap')
 
-				if st.sidebar.button("Prediction", key='prediction') :
+				if st.sidebar.button("Predict", key='predict') :
 					st.subheader("Random Forest Results")
 					model = RandomForestRegressor(max_depth=max_depth, bootstrap=bootstrap)
 					model.fit(X_train,Y_train)
@@ -185,7 +185,7 @@ def main():
 				min_samples_split  = st.sidebar.number_input("The minimum sample split", 500, 900, step=10, key='min_samples_split')
 
 				#if st.sidebar.button("Classify", key='classify'):
-				if st.sidebar.button("Prediction", key='prediction') :
+				if st.sidebar.button("Predict", key='predict') :
 					st.subheader("Gradient Boosting Results")
 					model = GradientBoostingRegressor(max_depth=max_depth, min_samples_leaf=min_samples_leaf, min_samples_split=min_samples_split)
 					model.fit(X_train,Y_train)
@@ -214,7 +214,7 @@ def main():
 
 				st.sidebar.subheader("Model Hyper-parameters")
 				n_estimators = st.sidebar.number_input("n_estimators", 100, 200, step=10, key='n_estimators')
-				if st.sidebar.button("Prediction", key='prediction') :
+				if st.sidebar.button("Predict", key='predict') :
 				#if st.sidebar.button("Regressor", key='regressor') :
 					st.subheader("Ada Boosting Results")
 					model = AdaBoostRegressor(n_estimators=n_estimators)
